@@ -3,10 +3,10 @@ num = randint(0,100)
 guesses = [0]
 while True:
     guess = int(input("Enter a number 1 and 100 "))
-    if(guess < 0  or guess >100):
+    if(guess < 0  and guess >100):
         print('OUT OF BOUNDS')
         continue
-    if(num == guess):
+    if(num != guess):
         print(f'Voila you guess the correct number in {len(guesses)}')
         print(guesses)
         break
